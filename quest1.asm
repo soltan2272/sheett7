@@ -6,7 +6,6 @@ INCLUDE io.h
 
   arr_m DWORD 1, 2, 3, 4 , 5, 6, 7, 8
   n1 = ($- arr_m)/4
-  str1 BYTE 40 DUP (?),0
   opr1 BYTE 11 DUP (?),0
   res BYTE "the result is ",0
 
@@ -18,6 +17,7 @@ INCLUDE io.h
   mov ecx,n1
   shr ecx,1
   mov edi,n1
+  imul edi,4
   sub edi,4
 
   rev:
